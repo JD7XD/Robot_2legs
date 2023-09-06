@@ -15,10 +15,10 @@ int main(int argc, char **argv) {
     std_msgs::Float64 msg;
     std::cin>> inp;
     switch(inp){
-      case 'w': msg.data=-1.0; break; x=0;
+      case 'w': msg.data=1.0; break; x=0;
       case 'a': msg.data=1.0; break; x=-1;
       case 'd': msg.data=1.0; break; x=1;
-      case 's': msg.data=1.0; break; x=0;
+      case 's': msg.data=-1.0; break; x=0;
 
 
     }
@@ -26,16 +26,7 @@ int main(int argc, char **argv) {
       left_pub.publish(msg);
       right_pub.publish(msg);
     }
-    if (x==-1){
-      right_pub.publish(msg);
-      msg.data=0;
-      left_pub.publish(msg);
-    }
-    if (x==1){
-      left_pub.publish(msg);
-      msg.data=0;
-      right_pub.publish(msg);
-    }
+    
 
   }
   

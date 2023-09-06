@@ -28,7 +28,7 @@
         <axis xyz="0 0 1"/>  <!-- changes axis of rotation -->
         <parent link="base_link"/>
         <child link="head_link"/>
-        <origin rpy="0 0 0" xyz="0 0 .5"/> <!-- moves the child_frame with respect to parent_frame -->
+        <origin rpy="0 0 0" xyz="0 0 .145"/> <!-- moves the child_frame with respect to parent_frame -->
         <limit effort="30" velocity="1.0"/>
     </joint>
 

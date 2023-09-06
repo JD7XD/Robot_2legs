@@ -4,16 +4,16 @@
 
     <xacro:include filename="$(find tutorial)/urdf/arm.xacro" />
     <xacro:include filename="$(find tutorial)/urdf/head.xacro" />
-    
+    <xacro:include filename="$(find tutorial)/urdf/back_arm.xacro" />
     <link name="base_link">
         <visual>
             <geometry>
-                <box size="1 1 1"/>
+                <box size="2 1.5 0.3"/>
             </geometry>
         </visual>
         <collision>
             <geometry>
-                <box size="1 1 1"/>
+                <box size="2 1.5 0.3"/>
             </geometry>
         </collision>
         <inertial>
@@ -22,8 +22,10 @@
         </inertial>
     </link>
     
-    <xacro:arm prefix="right" length="1.2" radius=".2" reflect="1" />
-    <xacro:arm prefix="left" length="1.2" radius=".2" reflect="-1" />
+    <xacro:arm prefix="right" length=".1" radius="0.5" reflect="1" />
+    <xacro:arm prefix="left" length=".1" radius="0.5" reflect="-1" />
+    <xacro:back_arm prefix="right" length=".1" radius="0.7" reflect="1" />
+    <xacro:back_arm prefix="left" length=".1" radius="0.7" reflect="-1" />
     <xacro:head />
     
     <!-- Add ROS plugin so we can interact with our robot -->
